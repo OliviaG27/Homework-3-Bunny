@@ -1,18 +1,18 @@
 //
 //  ViewController.swift
-//  In Class Bunny Hop
+//  Homework 3: Bunny Hop
 //
-//  Created by Brad D. Messner on 2/21/19.
-//  Copyright © 2019 Brad D. Messner. All rights reserved.
-//
+//  Created by Olivia R. Gennaro
+
 
 import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet weak var bunnyView: UIImageView!
     @IBOutlet weak var speedSlider: UISlider!
-    
-    
+    @IBOutlet weak var carrotView: UIImageView!
+    @IBOutlet weak var toggleInfo: UIButton!
+    @IBOutlet weak var hiddenInfo: UIButton!
     
     
     
@@ -33,6 +33,14 @@ class ViewController: UIViewController {
         bunnyView.startAnimating()
     }
 
+     @IBAction func hiddenButton(_ sender: Any) {
+               if carrotView.isHidden == true {
+                   carrotView.isHidden = false
+               } else {
+                   carrotView.isHidden = true
+        }
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,8 +72,15 @@ class ViewController: UIViewController {
         bunnyView.animationImages=hopAnimation
         bunnyView.animationDuration=1.0
         //bunnyView.startAnimating()
-    }
+        
+       
+            }
+            
+        }
+        
+    
+    
 
 
-}
+
 
